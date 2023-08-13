@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AlgoTraining\AlgoTraining\AlgoTraining.csproj" />
+    <ProjectReference Include="..\AlgoTraining\AlgoTraining.csproj" />
   </ItemGroup>
-
 </Project>
