@@ -48,5 +48,13 @@ namespace TestAlgoTraining
 
             Assert.That(result, Is.EqualTo(expected));
         }
+
+        [Test]
+        public void TestGetGreatestCommonDivisorZeros()
+        {
+            int result = EuclideanAlgorithm.GetGreatestCommonDivisor(0, 0);
+
+            Assert.That(result, Is.EqualTo(0));
+        }
     }
 }
