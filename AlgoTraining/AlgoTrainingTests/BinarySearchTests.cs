@@ -61,5 +61,38 @@ namespace TestAlgoTraining
 
             Assert.That(valueFoundAtIndex, Is.EqualTo(-1));
         }
+
+        [Test]
+        public void TestPresentValueInArrayOfSizeOne()
+        {
+            int[] values = { 5 };
+
+            int searchedValue = values[0];
+            int valueFoundAtIndex = BinarySearch.Find(values, searchedValue);
+
+            Assert.That(searchedValue, Is.EqualTo(values[valueFoundAtIndex]));
+        }
+
+        [Test]
+        public void TestGreaterAbsentValueInArrayOfSizeOne()
+        {
+            int[] values = { 5 };
+
+            int searchedValue = 7;
+            int valueFoundAtIndex = BinarySearch.Find(values, searchedValue);
+
+            Assert.That(valueFoundAtIndex, Is.EqualTo(-1));
+        }
+
+        [Test]
+        public void TestSmallerAbsentValueInArrayOfSizeOne()
+        {
+            int[] values = { 5 };
+
+            int searchedValue = 4;
+            int valueFoundAtIndex = BinarySearch.Find(values, searchedValue);
+
+            Assert.That(valueFoundAtIndex, Is.EqualTo(-1));
+        }
     }
 }
